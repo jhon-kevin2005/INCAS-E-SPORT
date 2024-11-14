@@ -1,31 +1,3 @@
-header {
-  background: #000; /* Color de fondo del encabezado */
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header .logo img {
-  height: 50px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-nav ul li a {
-  color: #ffffff; /* Cambia a blanco */
-  text-decoration: none;
-  font-weight: bold; /* Opcional, para hacer el texto más destacado */
-}
-
-nav ul li a:hover {
-  color: #ffa100; /* Color al pasar el mouse, opcional */
-}
-
 /* Estilos generales */
 body {
   font-family: Arial, sans-serif;
@@ -56,15 +28,22 @@ nav ul {
 nav ul li a {
   color: #ffa100;
   text-decoration: none;
+  font-weight: bold;
 }
 
-.section {
-  padding: 2rem;
-  text-align: center;
+nav ul li a:hover {
   color: #fff;
 }
 
-/* Estilo para la sección de bienvenida con fondo */
+/* Diseño responsivo para el menú */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Sección de bienvenida con fondo */
 .home {
   position: relative;
   background-image: url('https://assets.onecompiler.app/42wjfjacc/42wjhbenk/macchu-picchu-2801405_1920.jpg');
@@ -84,43 +63,77 @@ nav ul li a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* color de la capa superpuesta */
-  opacity: 0.7; /* Ajusta este valor para controlar la opacidad */
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0.1;
   z-index: 1;
 }
 
 .welcome-content {
   position: relative;
   z-index: 2;
-  color: #fff; /* Color del texto de bienvenida */
-}
+  color: #fff;
 }
 
-.team-grid, .sponsor-list, .store-items {
+/* Sección de sponsors */
+.sponsor-list {
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-.team-member, .store-item {
-  background: #333;
-  padding: 1rem;
-  border-radius: 8px;
-  color: #ffa100;
-}
-
 .sponsor-list img {
-  width: 100px;
+  width: 120px;
   height: auto;
-  padding: 5px;
+  padding: 10px;
   background: #1a1a1a;
   border-radius: 5px;
 }
 
+/* Social media */
+.social-media {
+  margin-top: 1rem;
+}
+
+.social-media a img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Formulario de contacto */
+form label {
+  display: block;
+  margin-top: 1rem;
+  color: #ffa100;
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #ffa100;
+  color: #1a1a1a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Footer */
 footer {
   background: #000;
   color: #ffa100;
   padding: 1rem;
   text-align: center;
+}
+
+/* Responsividad para las secciones */
+@media (max-width: 768px) {
+  .sponsor-list, .social-media, .welcome-content {
+    flex-direction: column;
+    align-items: center;
+  }
 }
