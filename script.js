@@ -1,12 +1,18 @@
-// script.js
-document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector("header");
-  const menuToggle = document.createElement("span");
-  menuToggle.classList.add("menu-toggle");
-  menuToggle.textContent = "☰";
-  header.appendChild(menuToggle);
+// Seleccionamos el botón de hamburguesa y el menú
+const menuToggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('nav ul');
 
-  menuToggle.addEventListener("click", () => {
-    header.classList.toggle("menu-open");
-  });
+// Función para alternar la visibilidad del menú
+menuToggle.addEventListener('click', () => {
+  navList.classList.toggle('show');
+});
+
+// Efecto de deslizamiento suave para el header al hacer scroll
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  if (window.scrollY > 0) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
 });
