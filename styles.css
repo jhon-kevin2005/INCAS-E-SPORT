@@ -32,7 +32,7 @@ header.scrolled {
 
 /* Logo en el encabezado */
 .logo img {
-  width: 50px;
+  width: 80px;
 }
 
 /* Navegación */
@@ -53,6 +53,11 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #ff8c00;
+}
+
+nav {
+  position: relative;
+  left: -10%; /* Mueve el menú un 10% hacia la izquierda */
 }
 
 /* Estilo del botón de hamburguesa */
