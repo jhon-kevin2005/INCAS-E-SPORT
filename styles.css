@@ -7,12 +7,14 @@ body {
   background-color: #1a1a1a;
 }
 
+/* Estilo del encabezado */
 header {
   background: #000;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 header .logo img {
@@ -40,6 +42,7 @@ nav ul li a:hover {
   nav ul {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 }
 
@@ -64,7 +67,7 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
-  opacity: 0.8;
+  opacity: 0.1;
   z-index: 1;
 }
 
@@ -72,6 +75,7 @@ nav ul li a:hover {
   position: relative;
   z-index: 2;
   color: #fff;
+  padding: 1rem;
 }
 
 /* Sección de sponsors */
@@ -83,7 +87,7 @@ nav ul li a:hover {
 }
 
 .sponsor-list img {
-  width: 120px;
+  width: 100px;
   height: auto;
   padding: 10px;
   background: #1a1a1a;
@@ -93,6 +97,7 @@ nav ul li a:hover {
 /* Social media */
 .social-media {
   margin-top: 1rem;
+  text-align: center;
 }
 
 .social-media a img {
@@ -130,10 +135,30 @@ footer {
   text-align: center;
 }
 
-/* Responsividad para las secciones */
+/* Ajustes responsivos para dispositivos móviles */
 @media (max-width: 768px) {
   .sponsor-list, .social-media, .welcome-content {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+  }
+
+  .sponsor-list img {
+    width: 80px; /* Ajuste para pantallas más pequeñas */
+  }
+
+  nav ul {
+    display: none; /* Escondemos el menú por defecto en móviles */
+  }
+
+  header .menu-toggle {
+    display: block;
+    color: #ffa100;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .menu-open nav ul {
+    display: flex;
   }
 }
