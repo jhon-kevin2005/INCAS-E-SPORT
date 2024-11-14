@@ -1,4 +1,4 @@
 // script.js
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Página cargada. Listo para e-sport!");
+  console.log("INCAS E-SPORT página cargada");
 });
