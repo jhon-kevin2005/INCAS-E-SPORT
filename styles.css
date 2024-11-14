@@ -86,6 +86,24 @@ nav ul li a:hover {
   flex-wrap: wrap;
 }
 
+/* Estilo para los logos de los sponsors */
+.sponsor-list img {
+  width: 40px; /* Tamaño fijo para todos los logos */
+  height: 40px; /* Altura fija para todos los logos */
+  padding: 10px;
+  background: #1a1a1a;
+  border-radius: 5px;
+  object-fit: contain; /* Asegura que la imagen mantenga su proporción dentro del contenedor */
+}
+
+@media (max-width: 768px) {
+  .sponsor-list img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
 .sponsor-list img {
   width: 100px;
   height: auto;
