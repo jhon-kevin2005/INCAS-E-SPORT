@@ -41,9 +41,8 @@ nav ul {
   gap: 15px;
   margin: 0;
   padding: 0;
-  margin-left: -20%; /* Mueve todo el menú un 10% hacia la derecha */
+ margin-left: -20%; /* Empuja los elementos hacia la derecha */
 }
-
 
 nav ul li a {
   color: #ffa100;
@@ -115,4 +114,37 @@ nav ul li a:hover {
   bottom: 0;
   opacity: 0.4;
   z-index: -1;
+}
+
+/* Sección de Sponsors */
+#sponsors {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sponsor-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Permite que los logos se acomoden en múltiples filas si es necesario */
+}
+
+.sponsor-list img {
+  width: 150px; /* Tamaño base para PC */
+  height: auto;
+  max-width: 100%; /* Asegura que no excedan el contenedor */
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+.sponsor-list img:hover {
+  transform: scale(1.1); /* Animación al pasar el cursor */
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .sponsor-list img {
+    width: 120px; /* Ajuste de tamaño para pantallas pequeñas */
+  }
 }
