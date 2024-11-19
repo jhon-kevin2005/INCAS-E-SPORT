@@ -41,7 +41,9 @@ nav ul {
   gap: 15px;
   margin: 0;
   padding: 0;
+  margin-left: 10%; /* Mueve todo el menú un 10% hacia la derecha */
 }
+
 
 nav ul li a {
   color: #ffa100;
