@@ -6,10 +6,9 @@ body {
   box-sizing: border-box;
   background-color: #1a1a1a;
   color: white;
-  overflow-x: hidden;
 }
 
-/* Header flotante y efecto glaseado */
+/* Header flotante */
 header {
   position: fixed;
   top: 0;
@@ -30,7 +29,7 @@ header.scrolled {
   background: rgba(26, 26, 26, 0.95);
 }
 
-/* Logo en el encabezado */
+/* Logo */
 .logo img {
   width: 80px;
 }
@@ -55,12 +54,7 @@ nav ul li a:hover {
   color: #ff8c00;
 }
 
-nav {
-  position: relative;
-  left: -10%; /* Mueve el menú un 10% hacia la izquierda */
-}
-
-/* Estilo del botón de hamburguesa */
+/* Menú hamburguesa */
 .menu-toggle {
   display: none;
   cursor: pointer;
@@ -74,7 +68,7 @@ nav {
   background-color: white;
 }
 
-/* Efecto para dispositivos móviles */
+/* Responsive */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -93,9 +87,7 @@ nav {
   }
 
   .menu-toggle {
-    display: block;
-    cursor: pointer;
-    color: #ffa100;
+    display: flex;
   }
 }
 
@@ -121,115 +113,4 @@ nav {
   bottom: 0;
   opacity: 0.4;
   z-index: -1;
-}
-
-/* Animaciones de texto */
-.welcome-content h1, .welcome-content p {
-  color: white;
-  animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Sección de sponsors */
-.sponsor-list {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.sponsor-list img {
-  width: 80px;
-  margin: 10px;
-  transition: transform 0.3s;
-}
-
-.sponsor-list img:hover {
-  transform: scale(1.1);
-}
-
-/* Estilos para íconos de redes sociales */
-.social-media img {
-  width: 30px;
-  transition: transform 0.3s;
-}
-
-.social-media img:hover {
-  transform: scale(1.2);
-}
-
-/* Tienda y contacto */
-.section {
-  padding: 40px 20px;
-  text-align: center;
-  color: white;
-  background-color: #1a1a1a;
-}
-
-/* Estilos para formulario de contacto */
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-form label, form input, form textarea, form button {
-  margin: 5px 0;
-}
-
-input, textarea {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background: #333;
-  color: white;
-}
-
-button {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background: #ffa100;
-  color: black;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background: #ff8c00;
-}
-
-/* Pie de página */
-footer {
-  padding: 20px;
-  text-align: center;
-  background-color: #1a1a1a;
-  color: white;
-  border-top: 2px solid #ffa100;
-}
-
-/* Personalización de la barra de desplazamiento */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #ffa100;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #ff8c00;
 }
