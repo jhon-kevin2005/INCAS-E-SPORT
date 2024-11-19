@@ -1,27 +1,22 @@
-// Seleccionamos el botón de hamburguesa y el menú
+// Selección de elementos
 const menuToggle = document.querySelector('.menu-toggle');
 const navList = document.querySelector('nav ul');
 
-// Detectamos el tamaño de la pantalla para aplicar solo en dispositivos móviles
-window.addEventListener('resize', () => {
+// Manejar el tamaño de pantalla
+const handleResize = () => {
   if (window.innerWidth <= 768) {
-    // Si el tamaño es menor o igual a 768px, habilitamos el menú de hamburguesa
-    menuToggle.style.display = 'block';
+    menuToggle.style.display = 'flex';
   } else {
-    // Si el tamaño es mayor, lo ocultamos (ya que el menú se muestra en línea)
     menuToggle.style.display = 'none';
-    navList.classList.remove('show'); // Aseguramos que el menú no esté abierto en pantallas grandes
+    navList.classList.remove('show');
   }
-});
+};
 
-// Iniciamos la visibilidad del menú de hamburguesa al cargar la página
-if (window.innerWidth <= 768) {
-  menuToggle.style.display = 'block';
-} else {
-  menuToggle.style.display = 'none';
-}
-
-// Función para alternar la visibilidad del menú en móvil
+// Alternar menú hamburguesa
 menuToggle.addEventListener('click', () => {
   navList.classList.toggle('show');
 });
+
+// Inicializar el tamaño y actualizar al redimensionar
+window.addEventListener('resize', handleResize);
+document.addEventListener('DOMContentLoaded', handleResize);
