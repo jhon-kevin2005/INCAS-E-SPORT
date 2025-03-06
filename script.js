@@ -1,4 +1,3 @@
-
 // Selección de elementos
 const menuToggle = document.querySelector('.menu-toggle');
 const navList = document.querySelector('nav ul');
@@ -12,3 +11,12 @@ const handleResize = () => {
     navList.classList.remove('show');
   }
 };
+
+// Alternar menú hamburguesa
+menuToggle.addEventListener('click', () => {
+  navList.classList.toggle('show');
+});
+
+// Inicializar el tamaño y actualizar al redimensionar
+window.addEventListener('resize', handleResize);
+document.addEventListener('DOMContentLoaded', handleResize);
