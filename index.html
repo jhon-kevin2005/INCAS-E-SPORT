@@ -4,61 +4,131 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INCAS E-SPORT</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e0e;
+      color: #fff;
+    }
+    header, section, footer {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    h1, h2 {
+      color: #f2b90c;
+    }
+    nav {
+      background-color: #111;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: #f2b90c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .games, .socials, .players, .achievements {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .game, .player, .achievement {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(242, 185, 12, 0.3);
+    }
+    .player img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #111;
+    }
+    a.social-link {
+      margin: 0 10px;
+      color: #f2b90c;
+      font-size: 20px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header flotante -->
+
   <header>
-    <div class="logo">
-      <img src="https://assets.onecompiler.app/42wjfjacc/42xzw9e3m/LOGO%20INC%20B.png" alt="Logo INCAS E-SPORT">
-    </div>
-    <!-- Botón de hamburguesa -->
-    <div class="menu-toggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#home">Inicio</a></li>
-        <li><a href="#about">Nosotros</a></li>
-        <li><a href="#team">Equipo</a></li>
-        <li><a href="#tournaments">Comunidad</a></li>
-        <li><a href="#sponsors">Sponsors</a></li>
-        <li><a href="#store">Tienda</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </nav>
+    <h1>INCAS E-SPORT</h1>
+    <p>Pasión. Estrategia. Dominio.</p>
   </header>
 
-  <!-- Sección de Bienvenida -->
-  <section id="home" class="home">
-    <div class="background-overlay"></div>
-    <div class="welcome-content">
-      <h1>Bienvenido a INCAS E-SPORT</h1>
-      <p>El equipo líder en el mundo del e-sport peruano.</p>
+  <nav>
+    <a href="#equipo">Equipo</a>
+    <a href="#juegos">Juegos</a>
+    <a href="#torneos">Logros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="equipo">
+    <h2>Conoce al Equipo</h2>
+    <div class="players">
+      <div class="player">
+        <img src="jugador1.jpg" alt="Jugador 1">
+        <h3>IGL - PACHACUTEC</h3>
+        <p>Rol: Capitán</p>
+      </div>
+      <div class="player">
+        <img src="jugador2.jpg" alt="Jugador 2">
+        <h3>SCOUT - HUASCAR</h3>
+        <p>Rol: Analista / Flanco</p>
+      </div>
+      <!-- Más jugadores -->
     </div>
   </section>
 
-  <!-- Secciones restantes -->
-  <section id="about" class="section">
-    <h2>Sobre Nosotros</h2>
-    <p>INCAS E-SPORT es un equipo competitivo con raíces en la cultura peruana.</p>
+  <section id="juegos">
+    <h2>Juegos Competitivos</h2>
+    <div class="games">
+      <div class="game">FREE FIRE</div>
+      <div class="game">BRAWL STARS</div>
+      <div class="game">BLOODSTRIKE</div>
+    </div>
   </section>
-  
-   <!-- Sección de Sponsors -->
-  <section id="sponsors" class="section">
-  <h2>Sponsors</h2>
-  <div class="sponsor-list">
-    <img src="https://assets.onecompiler.app/42wjfjacc/42y2vmmgs/CR%20-%20N.png" alt="Sponsor 1">
-    <img src="https://assets.onecompiler.app/42wjfjacc/42y2vmmgs/20240224_180927.png" alt="Sponsor 2">
-  </div>
-</section>
-  
+
+  <section id="torneos">
+    <h2>Logros Recientes</h2>
+    <div class="achievements">
+      <div class="achievement">
+        <h3>FFWS LATAM Clausura 2025</h3>
+        <p>Top 3 Regional</p>
+      </div>
+      <div class="achievement">
+        <h3>Brawl Cup Perú</h3>
+        <p>Campeones Nacionales</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <p>¿Quieres colaborar con nosotros o convertirte en patrocinador?</p>
+    <p>Escríbenos en nuestras redes sociales:</p>
+    <div class="socials">
+      <a class="social-link" href="#">Instagram</a>
+      <a class="social-link" href="#">Twitter</a>
+      <a class="social-link" href="#">TikTok</a>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 INCAS E-SPORT. Todos los derechos reservados.</p>
+    <p>&copy; 2025 INCAS E-SPORT - Todos los derechos reservados.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
