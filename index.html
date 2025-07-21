@@ -8,127 +8,155 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0e0e0e;
+      background-color: #0d0d0d;
       color: #fff;
+      scroll-behavior: smooth;
     }
-    header, section, footer {
+    header {
+      background-color: #ff8411;
+      color: #000;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    header img {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      height: 60px;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
       padding: 60px 20px;
       text-align: center;
     }
     h1, h2 {
-      color: #f2b90c;
+      color: #ff8411;
     }
-    nav {
-      background-color: #111;
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav a {
-      color: #f2b90c;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .games, .socials, .players, .achievements {
+    .games, .socials, .team {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 30px;
-      margin-top: 30px;
+      gap: 20px;
     }
-    .game, .player, .achievement {
+    .game, .player, .social {
       background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
       padding: 20px;
-      border-radius: 10px;
-      width: 250px;
-      box-shadow: 0 0 10px rgba(242, 185, 12, 0.3);
+      width: 200px;
     }
     .player img {
       width: 100%;
       border-radius: 10px;
     }
     footer {
-      background-color: #111;
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
     }
-    a.social-link {
-      margin: 0 10px;
-      color: #f2b90c;
-      font-size: 20px;
+    a.button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #ff8411;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    form input, form textarea, form button {
+      width: 80%;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 6px;
+      border: none;
+    }
+    form button {
+      background-color: #ff8411;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-
   <header>
+    <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/LOGO%20INC%20B.png" alt="Logo INCAS E-SPORT">
     <h1>INCAS E-SPORT</h1>
-    <p>Pasión. Estrategia. Dominio.</p>
+    <nav>
+      <a href="#sobre">Sobre Nosotros</a>
+      <a href="#juegos">Juegos</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#social">Redes</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#equipo">Equipo</a>
-    <a href="#juegos">Juegos</a>
-    <a href="#torneos">Logros</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+  <section id="sobre">
+    <h2>¿Quiénes somos?</h2>
+    <p>Somos INCAS E-SPORT, una escuadra competitiva que domina los campos de batalla digitales. Nuestro compromiso es con la excelencia, el respeto y la victoria. Participamos activamente en torneos de Free Fire, Brawl Stars y Blood Strike.</p>
+  </section>
+
+  <section id="juegos">
+    <h2>Juegos en los que competimos</h2>
+    <div class="games">
+      <div class="game">🔥 Free Fire</div>
+      <div class="game">💥 Brawl Stars</div>
+      <div class="game">🔫 Blood Strike</div>
+    </div>
+  </section>
 
   <section id="equipo">
-    <h2>Conoce al Equipo</h2>
-    <div class="players">
+    <h2>Nuestro Equipo</h2>
+    <div class="team">
       <div class="player">
         <img src="jugador1.jpg" alt="Jugador 1">
-        <h3>IGL - PACHACUTEC</h3>
+        <h3>Nickname</h3>
         <p>Rol: Capitán</p>
       </div>
       <div class="player">
         <img src="jugador2.jpg" alt="Jugador 2">
-        <h3>SCOUT - HUASCAR</h3>
-        <p>Rol: Analista / Flanco</p>
+        <h3>Nickname</h3>
+        <p>Rol: Support</p>
       </div>
-      <!-- Más jugadores -->
+      <div class="player">
+        <img src="jugador3.jpg" alt="Jugador 3">
+        <h3>Nickname</h3>
+        <p>Rol: Slayer</p>
+      </div>
     </div>
   </section>
 
-  <section id="juegos">
-    <h2>Juegos Competitivos</h2>
-    <div class="games">
-      <div class="game">FREE FIRE</div>
-      <div class="game">BRAWL STARS</div>
-      <div class="game">BLOODSTRIKE</div>
-    </div>
-  </section>
-
-  <section id="torneos">
-    <h2>Logros Recientes</h2>
-    <div class="achievements">
-      <div class="achievement">
-        <h3>FFWS LATAM Clausura 2025</h3>
-        <p>Top 3 Regional</p>
-      </div>
-      <div class="achievement">
-        <h3>Brawl Cup Perú</h3>
-        <p>Campeones Nacionales</p>
-      </div>
+  <section id="social">
+    <h2>Conéctate con nosotros</h2>
+    <div class="socials">
+      <div class="social"><a href="#" class="button">Instagram</a></div>
+      <div class="social"><a href="#" class="button">Twitter</a></div>
+      <div class="social"><a href="#" class="button">TikTok</a></div>
+      <div class="social"><a href="#" class="button">WhatsApp Comunidad</a></div>
     </div>
   </section>
 
   <section id="contacto">
-    <h2>Contáctanos</h2>
-    <p>¿Quieres colaborar con nosotros o convertirte en patrocinador?</p>
-    <p>Escríbenos en nuestras redes sociales:</p>
-    <div class="socials">
-      <a class="social-link" href="#">Instagram</a>
-      <a class="social-link" href="#">Twitter</a>
-      <a class="social-link" href="#">TikTok</a>
-    </div>
+    <h2>Contacto</h2>
+    <p>¿Tienes una propuesta, deseas patrocinar o colaborar con INCAS E-SPORT?</p>
+    <form>
+      <input type="text" placeholder="Tu nombre"><br><br>
+      <input type="email" placeholder="Correo"><br><br>
+      <textarea placeholder="Mensaje"></textarea><br><br>
+      <button type="submit">Enviar</button>
+    </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 INCAS E-SPORT - Todos los derechos reservados.</p>
+    <p>&copy; 2025 INCAS E-SPORT. Todos los derechos reservados.</p>
   </footer>
-
 </body>
 </html>
