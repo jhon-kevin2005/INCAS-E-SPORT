@@ -1,22 +1,16 @@
-// Selección de elementos
-const menuToggle = document.querySelector('.menu-toggle');
-const navList = document.querySelector('nav ul');
+// Efecto de luz que sigue el cursor en el fondo
+const cursorLight = document.getElementById("cursor-light");
 
-// Manejar el tamaño de pantalla
-const handleResize = () => {
-  if (window.innerWidth <= 768) {
-    menuToggle.style.display = 'flex';
-  } else {
-    menuToggle.style.display = 'none';
-    navList.classList.remove('show');
-  }
-};
-
-// Alternar menú hamburguesa
-menuToggle.addEventListener('click', () => {
-  navList.classList.toggle('show');
+document.addEventListener("mousemove", (e) => {
+  cursorLight.style.background = `
+    radial-gradient(circle at ${e.clientX}px ${e.clientY}px,
+    rgba(255,127,42,0.2), transparent 50%)`;
 });
 
-// Inicializar el tamaño y actualizar al redimensionar
-window.addEventListener('resize', handleResize);
-document.addEventListener('DOMContentLoaded', handleResize);
+// Menú hamburguesa
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+});
