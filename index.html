@@ -3,177 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INCAS E-SPORT</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d0d0d;
-      color: #fff;
-      scroll-behavior: smooth;
-    }
-    header {
-      background-color: #0d0d0d;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 40px;
-      border-bottom: 4px solid #ff8411;
-      position: relative;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      flex: 1;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 0.9rem;
-      position: relative;
-    }
-    nav a:hover::after, nav a.active::after {
-      content: "";
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background-color: #ff8411;
-    }
-    header img {
-      height: 70px;
-    }
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    h1, h2 {
-      color: #ff8411;
-    }
-    .games, .socials, .team {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .game, .player, .social {
-      background-color: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 12px;
-      padding: 20px;
-      width: 200px;
-    }
-    .player img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-    }
-    a.button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #ff8411;
-      color: #000;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-    form input, form textarea, form button {
-      width: 80%;
-      padding: 10px;
-      margin: 5px 0;
-      border-radius: 6px;
-      border: none;
-    }
-    form button {
-      background-color: #ff8411;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-    }
-  </style>
+  <title>Incas Esport</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Fondo interactivo -->
+  <div id="cursor-light"></div>
+
+  <!-- Encabezado -->
   <header>
+    <div class="logo">
+      <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LOGO.png" alt="Logo Incas Esport">
+    </div>
     <nav>
-      <a href="#sobre">SOBRE NOSOTROS</a>
-      <a href="#juegos">JUEGOS</a>
-      <a href="#equipo">EQUIPO</a>
-      <a href="#social">REDES</a>
-      <a href="#contacto">CONTACTO</a>
+      <ul id="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#tienda">Tienda</a></li>
+        <li><a href="#redes">Redes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
     </nav>
-    <a href="#">
-      <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/LOGO%20INC%20B.png" alt="Logo INCAS E-SPORT">
-    </a>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
   </header>
 
-  <section id="sobre">
-    <h2>¿Quiénes somos?</h2>
-    <p>Somos INCAS E-SPORT, una escuadra competitiva que domina los campos de batalla digitales. Nuestro compromiso es con la excelencia, el respeto y la victoria. Participamos activamente en torneos de Free Fire, Brawl Stars y Blood Strike.</p>
-  </section>
+  <!-- Contenido principal -->
+  <main>
+    <!-- Inicio -->
+    <section id="inicio" class="glass">
+      <h2>Bienvenidos a Incas Esport</h2>
+      <p>Un espacio dedicado al gaming competitivo y la comunidad.</p>
+    </section>
 
-  <section id="juegos">
-    <h2>Juegos en los que competimos</h2>
-    <div class="games">
-      <div class="game">🔥 Free Fire</div>
-      <div class="game">💥 Brawl Stars</div>
-      <div class="game">🔫 Blood Strike</div>
-    </div>
-  </section>
-
-  <section id="equipo">
-    <h2>Nuestro Equipo</h2>
-    <div class="team">
-      <div class="player">
-        <img src="jugador1.jpg" alt="Jugador 1">
-        <h3>Nickname</h3>
-        <p>Rol: Capitán</p>
+    <!-- Tienda -->
+    <section id="tienda" class="glass">
+      <h2>Tienda Oficial</h2>
+      <div class="catalog">
+        <div class="product">
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FAMILY.png" alt="Family">
+          <h3>Family</h3>
+        </div>
+        <div class="product">
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/MERCHANDISING.png" alt="Merchandising">
+          <h3>Merchandising</h3>
+        </div>
+        <div class="product">
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/JERSER%20%20OFICIAL.png" alt="Jersey Oficial">
+          <h3>Jersey Oficial</h3>
+        </div>
       </div>
-      <div class="player">
-        <img src="jugador2.jpg" alt="Jugador 2">
-        <h3>Nickname</h3>
-        <p>Rol: Support</p>
+    </section>
+
+    <!-- Redes Sociales -->
+    <section id="redes" class="glass">
+      <h2>Síguenos</h2>
+      <div class="socials">
+        <a href="https://www.tiktok.com/@incas_esport?lang=es-419" target="_blank" class="social-card">TikTok</a>
+        <a href="https://www.instagram.com/incas_esport.oficial/?hl=es" target="_blank" class="social-card">Instagram</a>
+        <a href="https://x.com/Incas_esport" target="_blank" class="social-card">Twitter (X)</a>
       </div>
-      <div class="player">
-        <img src="jugador3.jpg" alt="Jugador 3">
-        <h3>Nickname</h3>
-        <p>Rol: Slayer</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="social">
-    <h2>Conéctate con nosotros</h2>
-    <div class="socials">
-      <div class="social"><a href="https://www.instagram.com/incas_esport.oficial/?next=%2F&hl=es" target="_blank" class="button">Instagram</a></div>
-      <div class="social"><a href="https://x.com/Incas_esport" target="_blank" class="button">Twitter</a></div>
-      <div class="social"><a href="https://www.tiktok.com/@incas_esport?lang=es-419" target="_blank" class="button">TikTok</a></div>
-      <div class="social"><a href="https://whatsapp.com/channel/0029ValeU2a5a24AYjgvHC19" target="_blank" class="button">Canal de WhatsApp</a></div>
-    </div>
-  </section>
+    <!-- Contacto -->
+    <section id="contacto" class="glass">
+      <h2>Contacto</h2>
+      <form>
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <textarea placeholder="Escribe tu mensaje" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>¿Tienes una propuesta, deseas patrocinar o colaborar con INCAS E-SPORT?</p>
-    <form>
-      <input type="text" placeholder="Tu nombre"><br><br>
-      <input type="email" placeholder="Correo"><br><br>
-      <textarea placeholder="Mensaje"></textarea><br><br>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 INCAS E-SPORT. Todos los derechos reservados.</p>
+    <p>© 2025 Incasport - Todos los derechos reservados</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
