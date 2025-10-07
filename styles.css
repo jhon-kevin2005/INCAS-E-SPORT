@@ -1,4 +1,3 @@
-/* Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: Arial, sans-serif;
@@ -31,48 +30,54 @@ header {
 header .logo img { height: 50px; }
 header nav ul { display: flex; list-style: none; }
 header nav ul li { margin: 0 15px; }
-header nav ul li a { color: #fff; text-decoration: none; letter-spacing: 1px; }
+header nav ul li a { color: #fff; text-decoration: none; }
 .menu-toggle { display: none; font-size: 28px; cursor: pointer; color: #fff; }
 
-/* Inicio */
-.inicio-section {
+/* Hero */
+.hero-section {
   position: relative;
   text-align: center;
+  color: #fff;
   overflow: hidden;
 }
-.inicio-fondo {
+.hero-img {
   width: 100%;
-  height: 90vh;
-  object-fit: cover;
+  height: auto;
   opacity: 0.45;
 }
-.overlay {
+.hero-section::before,
+.hero-section::after {
+  content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent 30%, transparent 70%, rgba(0,0,0,0.5));
+  width: 100%;
+  height: 80px;
+  left: 0;
+  z-index: 1;
 }
-.inicio-texto {
+.hero-section::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+}
+.hero-section::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+.hero-text {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
 }
-.inicio-texto h1 { font-size: 3rem; margin-bottom: 10px; }
-.inicio-texto p { font-size: 1.3rem; max-width: 600px; margin: auto; }
 
-/* Secciones */
-main { padding: 40px 20px; }
+/* Secciones generales */
 .glass {
   background: rgba(255,255,255,0.08);
   border-radius: 12px;
-  padding: 30px;
+  padding: 20px;
   margin: 30px auto;
   max-width: 900px;
   backdrop-filter: blur(8px);
-  transition: transform 0.3s ease;
 }
-.glass:hover { transform: translateY(-5px); }
 
 /* Tienda */
 .catalog {
@@ -86,23 +91,26 @@ main { padding: 40px 20px; }
   border-radius: 10px;
   padding: 15px;
   text-align: center;
-  width: 220px;
+  width: 250px;
 }
 .product img { width: 100%; border-radius: 8px; }
 
 /* Aliados */
-.aliados-container {
+.slider {
   overflow: hidden;
-  width: 100%;
+  white-space: nowrap;
+  position: relative;
+  margin-top: 25px;
 }
-.aliados-scroll {
+.slide-track {
   display: flex;
-  gap: 40px;
-  animation: scroll 30s linear infinite;
+  width: calc(200px * 14);
+  animation: scroll 35s linear infinite;
 }
-.aliados-scroll img {
+.ally-logo {
   width: 100px;
   height: 100px;
+  margin: 0 20px;
   object-fit: contain;
 }
 @keyframes scroll {
@@ -110,7 +118,7 @@ main { padding: 40px 20px; }
   100% { transform: translateX(-50%); }
 }
 
-/* Redes */
+/* Socials */
 .socials {
   display: flex;
   justify-content: center;
@@ -148,21 +156,22 @@ footer {
   text-align: center;
   padding: 30px;
   background: rgba(0,0,0,0.9);
-  letter-spacing: 1px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .menu-toggle { display: block; }
   header nav ul {
-    flex-direction: column;
     display: none;
+    flex-direction: column;
     background: rgba(0,0,0,0.9);
     position: absolute;
-    top: 70px; right: 0;
-    width: 200px;
-    padding: 15px;
+    top: 70px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
   }
-  header nav ul.show { display: flex; }
+  header nav ul.active { display: flex; }
+  .menu-toggle { display: block; }
   .catalog { flex-direction: column; align-items: center; }
+  .product { width: 80%; }
 }
