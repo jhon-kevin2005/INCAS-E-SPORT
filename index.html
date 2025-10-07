@@ -1,96 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Incas Esport</title>
-  <link rel="stylesheet" href="styles.css">
-<link rel="icon" type="image/png" href="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/INC%20E-SPORT.png">
-
-
+  <link rel="icon" type="image/png" href="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/INC%20E-SPORT.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Fondo interactivo -->
   <div id="cursor-light"></div>
 
-  <!-- Encabezado -->
   <header>
     <div class="logo">
-      <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LOGO.png" alt="Logo Incas Esport">
+      <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LOGO.png" alt="Logo Incas" />
     </div>
     <nav>
-      <ul id="menu">
+      <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#tienda">Tienda</a></li>
-        <li><a href="#redes">Redes</a></li>
+        <li><a href="#aliados">Aliados</a></li>
+        <li><a href="#siguenos">Síguenos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <div class="menu-toggle">&#9776;</div>
   </header>
 
-  <!-- Contenido principal -->
   <main>
-    <!-- Inicio -->
-    <section id="inicio" class="glass">
-      <h2>Bienvenidos a Incas Esport</h2>
-      <p>Un espacio dedicado al gaming competitivo y la comunidad.</p>
+    <!-- 🏠 INICIO -->
+    <section id="inicio" class="inicio-section">
+      <div class="overlay"></div>
+      <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FONDO%20DE%20PAGINA.png" alt="Fondo Incas" class="inicio-fondo" />
+      <div class="inicio-texto">
+        <h1>Sobre Nosotros</h1>
+        <p>Somos Incas Esport, un equipo dedicado a la excelencia en los esports...</p>
+      </div>
     </section>
 
-    <!-- Tienda -->
+    <!-- 🛍️ TIENDA -->
     <section id="tienda" class="glass">
-      <h2>Tienda Oficial</h2>
+      <h2>Tienda</h2>
       <div class="catalog">
         <div class="product">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FAMILY.png" alt="Family">
-          <h3>Family</h3>
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FAMILY.png" alt="Family" />
+          <p>Family Collection</p>
         </div>
         <div class="product">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/MERCHANDISING.png" alt="Merchandising">
-          <h3>Merchandising</h3>
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/MERCHANDISING.png" alt="Merchandising" />
+          <p>Merchandising</p>
         </div>
         <div class="product">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/JERSER%20%20OFICIAL.png" alt="Jersey Oficial">
-          <h3>Jersey Oficial</h3>
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/JERSER%20%20OFICIAL.png" alt="Jersey Oficial" />
+          <p>Jersey Oficial</p>
         </div>
       </div>
     </section>
 
-    <!-- Redes Sociales -->
-    <section id="redes" class="glass">
+    <!-- 🤝 ALIADOS -->
+    <section id="aliados" class="glass aliados-section">
+      <h2>Aliados</h2>
+      <div class="aliados-container">
+        <div class="aliados-scroll">
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LGO.png" alt="NW" />
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/TKS%20-2.png" alt="TKS" />
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FBI%20ESPORT1.png" alt="FBI" />
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/20250913_182625.png" alt="Logo" />
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/kira.png" alt="Kira" />
+          <!-- repetidos para bucle -->
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FBI%20ESPORT1.png" alt="FBI" />
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LGO.png" alt="NW" />
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/kira.png" alt="Kira" />
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/TKS%20-2.png" alt="TKS" />
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/20250913_182625.png" alt="Logo" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 🌐 SÍGUENOS -->
+    <section id="siguenos" class="glass">
       <h2>Síguenos</h2>
       <div class="socials">
-        <a href="https://www.tiktok.com/@incas_esport?lang=es-419" target="_blank" class="social-card">TikTok</a>
-        <a href="https://www.instagram.com/incas_esport.oficial/?hl=es" target="_blank" class="social-card">Instagram</a>
-        <a href="https://x.com/Incas_esport" target="_blank" class="social-card">Twitter</a>
+        <a href="https://www.tiktok.com/@incas_esport?lang=es-419" class="social-card">TikTok</a>
+        <a href="https://www.instagram.com/incas_esport.oficial/?hl=es" class="social-card">Instagram</a>
+        <a href="https://x.com/Incas_esport" class="social-card">X (Twitter)</a>
       </div>
     </section>
 
-    <!-- Contacto -->
+    <!-- 📩 CONTACTO -->
     <section id="contacto" class="glass">
       <h2>Contacto</h2>
       <form>
-        <input type="text" placeholder="Nombre" required>
-        <input type="email" placeholder="Correo electrónico" required>
-        <textarea placeholder="Escribe tu mensaje" rows="4" required></textarea>
+        <input type="text" placeholder="Tu nombre" required />
+        <input type="email" placeholder="Tu correo" required />
+        <textarea placeholder="Tu mensaje" rows="4" required></textarea>
         <button type="submit">Enviar</button>
       </form>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Incasport - Todos los derechos reservados</p>
+    <p>© 2025 Incas Esport. Todos los derechos reservados.</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
