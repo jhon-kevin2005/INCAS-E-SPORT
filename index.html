@@ -1,83 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Incas Esport</title>
-  <link rel="icon" type="image/png" href="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/INC%20E-SPORT.png" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/INC%20E-SPORT.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="cursor-light"></div>
 
   <header>
     <div class="logo">
-      <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LOGO.png" alt="Logo Incas" />
+      <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LOGO.png" alt="Logo Incas">
     </div>
     <nav>
-      <ul>
+      <ul id="nav-links">
         <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#tienda">Tienda</a></li>
-        <li><a href="#aliados">Aliados</a></li>
-        <li><a href="#siguenos">Síguenos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#about">Sobre Nosotros</a></li>
+        <li><a href="#store">Tienda</a></li>
+        <li><a href="#allies">Aliados</a></li>
+        <li><a href="#socials">Síguenos</a></li>
+        <li><a href="#contact">Contacto</a></li>
       </ul>
     </nav>
-    <div class="menu-toggle">&#9776;</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
   </header>
 
   <main>
-    <!-- 🏠 INICIO -->
-    <section id="inicio" class="inicio-section">
-      <div class="overlay"></div>
-      <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FONDO%20DE%20PAGINA.png" alt="Fondo Incas" class="inicio-fondo" />
-      <div class="inicio-texto">
-        <h1>Sobre Nosotros</h1>
-        <p>Somos Incas Esport, un equipo dedicado a la excelencia en los esports...</p>
+    <!-- INICIO -->
+    <section id="inicio" class="hero-section">
+      <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FONDO%20DE%20PAGINA.png" alt="Fondo" class="hero-img">
+      <div class="hero-text">
+        <h1>Somos Incas Esport</h1>
+        <p>Un equipo dedicado a la excelencia en los esports...</p>
       </div>
     </section>
 
-    <!-- 🛍️ TIENDA -->
-    <section id="tienda" class="glass">
+    <!-- TIENDA -->
+    <section id="store" class="glass">
       <h2>Tienda</h2>
       <div class="catalog">
         <div class="product">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FAMILY.png" alt="Family" />
-          <p>Family Collection</p>
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FAMILY.png" alt="Family">
+          <h3>Family</h3>
         </div>
         <div class="product">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/MERCHANDISING.png" alt="Merchandising" />
-          <p>Merchandising</p>
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/MERCHANDISING.png" alt="Merchandising">
+          <h3>Merchandising</h3>
         </div>
         <div class="product">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/JERSER%20%20OFICIAL.png" alt="Jersey Oficial" />
-          <p>Jersey Oficial</p>
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/JERSER%20%20OFICIAL.png" alt="Jersey Oficial">
+          <h3>Jersey Oficial</h3>
         </div>
       </div>
     </section>
 
-    <!-- 🤝 ALIADOS -->
-    <section id="aliados" class="glass aliados-section">
+    <!-- ALIADOS -->
+    <section id="allies" class="glass">
       <h2>Aliados</h2>
-      <div class="aliados-container">
-        <div class="aliados-scroll">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LGO.png" alt="NW" />
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/TKS%20-2.png" alt="TKS" />
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FBI%20ESPORT1.png" alt="FBI" />
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/20250913_182625.png" alt="Logo" />
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/kira.png" alt="Kira" />
-          <!-- repetidos para bucle -->
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FBI%20ESPORT1.png" alt="FBI" />
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LGO.png" alt="NW" />
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/kira.png" alt="Kira" />
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/TKS%20-2.png" alt="TKS" />
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/20250913_182625.png" alt="Logo" />
+      <p>Nuestras alianzas estratégicas fortalecen nuestra comunidad.</p>
+
+      <div class="slider">
+        <div class="slide-track">
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LGO.png" alt="Aliado 1" class="ally-logo">
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/TKS%20-2.png" alt="Aliado 2" class="ally-logo">
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FBI%20ESPORT1.png" alt="Aliado 3" class="ally-logo">
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/20250913_182625.png" alt="Aliado 4" class="ally-logo">
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/kira.png" alt="Aliado 5" class="ally-logo">
+
+          <!-- Repetición mezclada -->
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/TKS%20-2.png" alt="Aliado 2" class="ally-logo">
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/kira.png" alt="Aliado 5" class="ally-logo">
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LGO.png" alt="Aliado 1" class="ally-logo">
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FBI%20ESPORT1.png" alt="Aliado 3" class="ally-logo">
         </div>
       </div>
     </section>
 
-    <!-- 🌐 SÍGUENOS -->
-    <section id="siguenos" class="glass">
+    <!-- SIGUENOS -->
+    <section id="socials" class="glass">
       <h2>Síguenos</h2>
       <div class="socials">
         <a href="https://www.tiktok.com/@incas_esport?lang=es-419" class="social-card">TikTok</a>
@@ -86,13 +88,13 @@
       </div>
     </section>
 
-    <!-- 📩 CONTACTO -->
-    <section id="contacto" class="glass">
+    <!-- CONTACTO -->
+    <section id="contact" class="glass">
       <h2>Contacto</h2>
       <form>
-        <input type="text" placeholder="Tu nombre" required />
-        <input type="email" placeholder="Tu correo" required />
-        <textarea placeholder="Tu mensaje" rows="4" required></textarea>
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <textarea rows="4" placeholder="Mensaje" required></textarea>
         <button type="submit">Enviar</button>
       </form>
     </section>
