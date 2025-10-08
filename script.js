@@ -1,4 +1,4 @@
-// Luz del cursor
+// Luz que sigue el cursor
 const cursorLight = document.getElementById("cursor-light");
 document.addEventListener("mousemove", (e) => {
   cursorLight.style.background = `
@@ -7,9 +7,9 @@ document.addEventListener("mousemove", (e) => {
   `;
 });
 
-// Menú móvil
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+// Menú responsive
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav ul");
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("show");
 });
