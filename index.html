@@ -4,58 +4,77 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Incas Esport</title>
-  <!-- favicon -->
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/INC%20E-SPORT.png">
 
   <style>
-    /* ---------- Reset / Base ---------- */
+    /* ---------- Reset ---------- */
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html,body { height: 100%; }
+    html, body { height: 100%; }
+
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg,#000 70%, #ff7f2a 100%);
+      background: linear-gradient(135deg, #000 70%, #ff7f2a 100%);
       color: #fff;
       overflow-x: hidden;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      letter-spacing: .4px;
     }
 
-    /* Cursor light (fondo interactivo) */
+    /* ---------- Cursor Light ---------- */
     #cursor-light {
-      position: fixed; inset: 0;
+      position: fixed;
+      inset: 0;
       pointer-events: none;
       z-index: 0;
-      background: radial-gradient(circle at 50% 50%, rgba(255,127,42,0.18), transparent 40%);
+      background: radial-gradient(circle at 50% 50%, rgba(255,127,42,0.2), transparent 50%);
     }
 
     /* ---------- Header ---------- */
     header {
-      position: sticky; top: 0;
-      display: flex; align-items: center; justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 14px 24px;
       background: rgba(0,0,0,0.85);
-      border-bottom: 1px solid rgba(255,127,42,0.06);
-      z-index: 20;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,127,42,0.25);
     }
-    .logo img { height: 48px; display:block; }
+
+    .logo img {
+      height: 48px;
+    }
+
     nav ul {
       list-style: none;
       display: flex;
       gap: 18px;
-      align-items:center;
     }
-    nav a {
-      color: #fff; text-decoration: none; font-weight: 600;
-      padding: 6px 4px; transition: color .18s;
-    }
-    nav a:hover { color: #ff7f2a; }
-    .menu-toggle { display: none; font-size: 26px; cursor: pointer; color: #fff; }
 
-    /* ---------- HERO / INICIO ---------- */
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #ff7f2a;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* ---------- Hero ---------- */
     #inicio {
       position: relative;
-      height: 72vh;
+      height: 70vh;
       min-height: 420px;
       display: flex;
       align-items: center;
@@ -63,276 +82,286 @@
       text-align: center;
       overflow: hidden;
     }
-    /* background image via pseudo-element (allows opacity) */
-    #inicio::before{
-      content:"";
-      position:absolute; inset:0;
+
+    #inicio::before {
+      content: "";
+      position: absolute;
+      inset: 0;
       background: url("https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FONDO%20DE%20PAGINA.png") center/cover no-repeat;
-      opacity: 0.45; /* 45% */
+      opacity: 0.45;
       z-index: 0;
     }
-    /* top+bottom gradient */
-    #inicio::after{
-      content:"";
-      position:absolute; inset:0;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.18) 35%, rgba(0,0,0,0.18) 65%, rgba(0,0,0,0.55) 100%);
+
+    #inicio::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.6)
+      );
       z-index: 1;
     }
+
     .hero-content {
-      position: relative; z-index: 2;
-      max-width: 1000px;
+      position: relative;
+      z-index: 2;
       padding: 0 20px;
+      max-width: 900px;
     }
+
     .hero-content h1 {
-      font-size: clamp(28px, 4.2vw, 48px);
+      font-size: clamp(28px, 4vw, 48px);
       margin-bottom: 12px;
       letter-spacing: 2px;
     }
+
     .hero-content p {
-      font-size: clamp(14px, 1.3vw, 18px);
-      color: #e9e9e9;
-      max-width: 760px;
-      margin: 0 auto;
-      line-height: 1.45;
+      color: #e0e0e0;
+      font-size: clamp(14px, 1.2vw, 18px);
     }
 
-    /* ---------- Main sections ---------- */
-    main { padding: 36px 18px; position: relative; z-index: 5; }
-    .glass {
-      background: rgba(255,255,255,0.06);
-      border-radius: 12px;
-      padding: 26px;
-      margin: 22px auto;
-      max-width: 1000px;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+    /* ---------- Glass Sections ---------- */
+    main {
+      padding: 40px 18px;
+      position: relative;
+      z-index: 5;
     }
-    .glass h2 { margin-bottom: 10px; }
-    .glass p { color: #d7d7d7; }
+
+    .glass {
+      background: rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 26px;
+      margin: 28px auto;
+      max-width: 1000px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+
+    .glass h2 {
+      margin-bottom: 10px;
+    }
+
+    .glass p {
+      color: #d5d5d5;
+    }
 
     /* ---------- Tienda ---------- */
     .catalog {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
-      align-items: start;
-      margin-top: 14px;
+      margin-top: 16px;
     }
+
     .product {
       background: rgba(0,0,0,0.6);
+      border-radius: 12px;
       padding: 14px;
-      border-radius: 10px;
       text-align: center;
+      transition: transform 0.3s;
     }
-    .product img { width:100%; height: auto; border-radius:8px; margin-bottom:8px; }
 
-    /* ---------- Aliados (carrusel mezclado) ---------- */
-    .aliados-section { overflow: hidden; }
-    .aliados-container {
+    .product:hover {
+      transform: translateY(-6px);
+    }
+
+    .product img {
       width: 100%;
-      overflow: hidden;
-      margin-top: 12px;
-      padding: 10px 0;
-    }
-    .aliados-track {
-      display: flex;
-      gap: 34px;
-      align-items: center;
-      /* duplicated set width not required; use infinite translate */
-      animation: scroll-left 30s linear infinite;
-    }
-    /* logos 100x100 */
-    .aliados-track img {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      filter: saturate(0.98) contrast(0.95);
-      transition: transform .25s ease, filter .25s ease;
-    }
-    .aliados-track img:hover { transform: scale(1.06); filter: none; }
-
-    @keyframes scroll-left {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); } /* content must be duplicated in markup */
+      border-radius: 8px;
+      margin-bottom: 8px;
     }
 
     /* ---------- Redes ---------- */
     .socials {
-      display:flex; gap: 12px; flex-wrap:wrap; justify-content:center; margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 12px;
     }
+
     .social-card {
-      background: rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.1);
+      padding: 12px 22px;
+      border-radius: 12px;
       color: #fff;
-      padding: 10px 18px;
-      border-radius: 10px;
       text-decoration: none;
       font-weight: 700;
-      transition: background .18s;
+      transition: background 0.2s;
     }
-    .social-card:hover { background: rgba(255,127,42,0.28); }
+
+    .social-card:hover {
+      background: rgba(255,127,42,0.35);
+    }
 
     /* ---------- Contacto ---------- */
-    form { display:flex; flex-direction:column; gap:10px; margin-top:8px; }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
     input, textarea {
-      padding: 10px; border-radius:8px; border: none; background: rgba(255,255,255,0.04); color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
     }
+
     button {
-      background: #ff7f2a; color: #fff; border: none; padding: 10px 14px; border-radius: 8px; cursor:pointer;
+      background: #ff7f2a;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
     }
-    button:hover { background: #e56f1f; }
+
+    button:hover {
+      background: #e56f1f;
+    }
 
     /* ---------- Footer ---------- */
-    footer { text-align:center; padding:20px 8px; color:#cfcfcf; font-size:0.95rem; }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #cfcfcf;
+      font-size: 0.9rem;
+    }
 
     /* ---------- Responsive ---------- */
-    @media (max-width: 900px) {
-      header { padding: 12px 18px; }
-      nav ul { gap: 12px; }
-      .hero-content h1 { font-size: clamp(22px, 6vw, 36px); }
-    }
     @media (max-width: 768px) {
-      .menu-toggle { display:block; }
-      nav ul { display:none; position:absolute; right:12px; top:60px; background: rgba(0,0,0,0.95); padding: 12px; border-radius:8px; flex-direction:column; gap:8px; }
-      nav ul.show { display:flex; }
-      .aliados-track { gap: 20px; animation-duration: 40s; }
-      #inicio { height: 56vh; }
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        display: none;
+        position: absolute;
+        right: 16px;
+        top: 60px;
+        flex-direction: column;
+        background: rgba(0,0,0,0.95);
+        padding: 14px;
+        border-radius: 10px;
+        gap: 10px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      #inicio {
+        height: 55vh;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Fondo interactivo -->
-  <div id="cursor-light" aria-hidden="true"></div>
+
+  <!-- Cursor Light -->
+  <div id="cursor-light"></div>
 
   <!-- Header -->
   <header>
-    <div class="logo"><img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LOGO.png" alt="Incas Logo"></div>
+    <div class="logo">
+      <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LOGO.png" alt="Incas Esport">
+    </div>
+
     <nav>
       <ul id="main-nav">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#tienda">Tienda</a></li>
-        <li><a href="#aliados">Aliados</a></li>
         <li><a href="#siguenos">Síguenos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
-    <div class="menu-toggle" id="menu-toggle" aria-hidden="true">☰</div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
   </header>
 
-  <!-- HERO / INICIO -->
-  <section id="inicio" aria-labelledby="hero-title">
+  <!-- Hero -->
+  <section id="inicio">
     <div class="hero-content">
-      <h1 id="hero-title">Sobre Nosotros</h1>
-      <p>Somos Incas Esport, un equipo dedicado a la excelencia en los esports...</p>
+      <h1>Sobre Nosotros</h1>
+      <p>Somos Incas Esport, un equipo enfocado en la excelencia competitiva y el crecimiento de la comunidad.</p>
     </div>
   </section>
 
-  <!-- MAIN -->
+  <!-- Main -->
   <main>
     <!-- Tienda -->
-    <section id="tienda" class="glass" aria-labelledby="tienda-title">
-      <h2 id="tienda-title">Tienda</h2>
+    <section id="tienda" class="glass">
+      <h2>Tienda</h2>
       <div class="catalog">
         <div class="product">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FAMILY.png" alt="Family">
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FAMILY.png" alt="">
           <p>Family Collection</p>
         </div>
         <div class="product">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/MERCHANDISING.png" alt="Merchandising">
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/MERCHANDISING.png" alt="">
           <p>Merchandising</p>
         </div>
         <div class="product">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/JERSER%20%20OFICIAL.png" alt="Jersey">
+          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/JERSER%20%20OFICIAL.png" alt="">
           <p>Jersey Oficial</p>
         </div>
       </div>
     </section>
 
-    <!-- Aliados -->
-    <section id="aliados" class="glass aliados-section" aria-labelledby="aliados-title">
-      <h2 id="aliados-title">Aliados</h2>
-      <p style="color:#d0d0d0; margin-top:8px;">Nuestras alianzas estratégicas fortalecen la comunidad.</p>
-
-      <div class="aliados-container" aria-hidden="false">
-        <div class="aliados-track" id="aliados-track">
-          <!-- mezcla / orden personalizada, luego se repite (duplicado) para bucle infinito -->
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LGO.png" alt="NW">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/TKS%20-2.png" alt="TKS">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/20250913_182625.png" alt="Logo4">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/kira.png" alt="Kira">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FBI%20ESPORT1.png" alt="FBI">
-          <!-- repetición para loop suave -->
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/20250913_182625.png" alt="Logo4">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LGO.png" alt="NW">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FBI%20ESPORT1.png" alt="FBI">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/TKS%20-2.png" alt="TKS">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/kira.png" alt="Kira">
-        </div>
-      </div>
-    </section>
-
     <!-- Síguenos -->
-    <section id="siguenos" class="glass" aria-labelledby="siguenos-title">
-      <h2 id="siguenos-title">Síguenos</h2>
+    <section id="siguenos" class="glass">
+      <h2>Síguenos</h2>
       <div class="socials">
-        <a class="social-card" href="https://www.instagram.com/incas_esport.oficial/?hl=es" target="_blank" rel="noopener">Instagram</a>
-        <a class="social-card" href="https://www.tiktok.com/@incas_esport?lang=es-419" target="_blank" rel="noopener">TikTok</a>
-        <a class="social-card" href="https://x.com/Incas_esport" target="_blank" rel="noopener">X (Twitter)</a>
+        <a class="social-card" href="https://www.instagram.com/incas_esport.oficial/" target="_blank">Instagram</a>
+        <a class="social-card" href="https://www.tiktok.com/@incas_esport" target="_blank">TikTok</a>
+        <a class="social-card" href="https://x.com/Incas_esport" target="_blank">X</a>
       </div>
     </section>
 
     <!-- Contacto -->
-    <section id="contacto" class="glass" aria-labelledby="contacto-title">
-      <h2 id="contacto-title">Contacto</h2>
+    <section id="contacto" class="glass">
+      <h2>Contacto</h2>
       <form>
         <input type="text" placeholder="Tu nombre" required>
         <input type="email" placeholder="Tu correo" required>
-        <textarea placeholder="Tu mensaje" rows="4" required></textarea>
+        <textarea rows="4" placeholder="Tu mensaje" required></textarea>
         <button type="submit">Enviar</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Incas Esport. Todos los derechos reservados.</p>
+    © 2025 Incas Esport. Todos los derechos reservados.
   </footer>
 
   <script>
-    // ---- seguridad: sólo ejecutar cuando DOM cargue ----
-    document.addEventListener('DOMContentLoaded', () => {
-      // efecto luz cursor (si existe el elemento)
-      const cursorLight = document.getElementById('cursor-light');
-      if (cursorLight) {
-        document.addEventListener('mousemove', (e) => {
-          cursorLight.style.background = 'radial-gradient(circle at ' + e.clientX + 'px ' + e.clientY + 'px, rgba(255,127,42,0.18), transparent 40%)';
-        });
-      }
+    // Cursor light
+    const cursorLight = document.getElementById("cursor-light");
+    document.addEventListener("mousemove", (e) => {
+      cursorLight.style.background =
+        `radial-gradient(circle at ${e.clientX}px ${e.clientY}px,
+        rgba(255,127,42,0.2), transparent 50%)`;
+    });
 
-      // menú responsive
-      const menuToggle = document.getElementById('menu-toggle');
-      const navUl = document.getElementById('main-nav');
+    // Menú responsive
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("main-nav");
 
-      if (menuToggle && navUl) {
-        menuToggle.addEventListener('click', () => navUl.classList.toggle('show'));
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("show");
+    });
 
-        // cerrar menú al clicar enlace (útil en móviles)
-        navUl.querySelectorAll('a').forEach(a => {
-          a.addEventListener('click', () => navUl.classList.remove('show'));
-        });
-      }
-
-      // Mejorar rendimiento: si la pista de aliados no tiene suficiente ancho en pantalla pequeña,
-      // reducimos velocidad
-      const track = document.querySelector('.aliados-track');
-      if (track) {
-        const setSpeed = () => {
-          const width = track.scrollWidth;
-          // más ancho -> animación más lenta
-          const base = Math.max(20, Math.min(60, Math.round(width / 50)));
-          track.style.animationDuration = base + 's';
-        };
-        setSpeed();
-        window.addEventListener('resize', setSpeed);
-      }
+    nav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("show");
+      });
     });
   </script>
 </body>
