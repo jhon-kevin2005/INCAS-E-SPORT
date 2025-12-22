@@ -1,202 +1,113 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #000 70%, #ff7f2a 100%);
-  color: #fff;
-  overflow-x: hidden;
+  background: linear-gradient(135deg,#000 70%,#ff7f2a 100%);
+  color:#fff;
+  overflow-x:hidden;
 }
 
+/* Cursor light */
 #cursor-light {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
-  background: radial-gradient(circle at 50% 50%, rgba(255,127,42,0.2), transparent 50%);
-  z-index: 0;
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:radial-gradient(circle at 50% 50%, rgba(255,127,42,0.18), transparent 45%);
+  z-index:0;
 }
 
-/* Header */
+/* HEADER */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: rgba(0,0,0,0.8);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  position:sticky;
+  top:0;
+  z-index:10;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 24px;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
 }
+.logo img { height:48px; }
 
-.logo img { height: 50px; }
-
+/* NAV */
 nav ul {
-  display: flex;
-  list-style: none;
+  display:flex;
+  gap:18px;
+  list-style:none;
 }
+nav a { color:#fff; text-decoration:none; font-weight:bold; }
+.menu-toggle { display:none; font-size:26px; cursor:pointer; }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  letter-spacing: 1.5px;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 1.8em;
-  cursor: pointer;
-}
-
-/* Hero */
-.hero {
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-  height: 80vh;
-}
-
+/* HERO */
+.hero { position:relative; height:70vh; display:flex; justify-content:center; align-items:center; }
 .hero-bg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.45;
+  position:absolute; inset:0;
+  background:url("https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FONDO%20DE%20PAGINA.png") center/cover no-repeat;
+  opacity:0.45;
 }
+.hero-content { position:relative; text-align:center; z-index:2; }
 
-.hero-overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent 30%, transparent 70%, rgba(0,0,0,0.6));
-}
-
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
+/* GLASS */
 .glass {
   background: rgba(255,255,255,0.08);
-  border-radius: 12px;
-  padding: 20px;
-  margin: 40px auto;
-  max-width: 800px;
-  backdrop-filter: blur(8px);
-  transition: transform 0.3s ease;
+  border-radius:14px;
+  padding:24px;
+  margin:40px auto;
+  max-width:1000px;
+  backdrop-filter:blur(10px);
 }
 
-.glass:hover {
-  transform: translateY(-5px);
-}
+/* SECTIONS */
+.section h2 { margin-bottom:10px; text-align:center; }
 
-/* Tienda */
+/* TIENDA */
 .catalog {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:20px;
+  margin-top:20px;
+}
+.product { background: rgba(0,0,0,0.6); border-radius:12px; padding:14px; text-align:center; }
+.product img { width:100%; border-radius:10px; }
+.buy-btn { display:inline-block; margin-top:10px; padding:8px 16px; background:#25D366; color:#000; border-radius:8px; text-decoration:none; font-weight:bold; }
+
+/* REDES */
+.socials { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+.social-btn { padding:12px 22px; border-radius:12px; text-decoration:none; color:#fff; font-weight:bold; }
+.instagram { background:#E1306C; }
+.tiktok { background:#000; }
+.x { background:#1DA1F2; }
+
+/* CONTACTO */
+form { display:flex; flex-direction:column; gap:10px; }
+input, textarea { padding:10px; border-radius:8px; border:none; }
+
+/* Spline flotante en contacto */
+.spline-contact {
+  position: absolute;
+  top:0;
+  right:-50px;
+  width:300px;
+  height:300px;
+  pointer-events:none;
+  z-index:1;
 }
 
-.product {
-  background: rgba(0,0,0,0.6);
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  width: 200px;
-}
-
-.product img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-/* Aliados */
-.aliados-slider {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 130px;
-}
-
-.slide-track {
-  display: flex;
-  width: calc(200px * 10);
-  animation: scroll 30s linear infinite;
-}
-
-.slide-track img {
-  width: 100px;
-  height: 100px;
-  margin: 0 20px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
-}
-
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-/* Redes */
-.socials {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.social-card {
-  background: rgba(255,255,255,0.1);
-  padding: 15px 25px;
-  border-radius: 12px;
-  text-decoration: none;
-  color: #fff;
-  transition: background 0.3s;
-}
-
-.social-card:hover {
-  background: rgba(255,127,42,0.3);
-}
-
-/* Contacto */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input, textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-}
-
-button {
-  background: #ff7f2a;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* Footer */
+/* FOOTER */
 footer {
-  text-align: center;
-  padding: 20px;
+  text-align:center;
+  padding:20px;
   background: rgba(0,0,0,0.9);
-  font-size: 14px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  nav ul { display: none; flex-direction: column; background: rgba(0,0,0,0.9); position: absolute; top: 60px; right: 0; width: 200px; }
-  nav ul.show { display: flex; }
-  .menu-toggle { display: block; }
-  .catalog { flex-direction: column; align-items: center; }
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav ul {
+    position:absolute; top:60px; right:20px; flex-direction:column;
+    background: rgba(0,0,0,0.95); padding:14px; display:none;
+  }
+  nav ul.show { display:flex; }
+  .menu-toggle { display:block; }
+  .spline-contact { position:relative; margin:0 auto; top:0; right:0; width:200px; height:200px; margin-top:20px; }
 }
