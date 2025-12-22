@@ -1,368 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Incas Esport</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/INC%20E-SPORT.png">
-
-  <style>
-    /* ---------- Reset ---------- */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #000 70%, #ff7f2a 100%);
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    /* ---------- Cursor Light ---------- */
-    #cursor-light {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      background: radial-gradient(circle at 50% 50%, rgba(255,127,42,0.2), transparent 50%);
-    }
-
-    /* ---------- Header ---------- */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 24px;
-      background: rgba(0,0,0,0.85);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,127,42,0.25);
-    }
-
-    .logo img {
-      height: 48px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 18px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      letter-spacing: 1px;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: #ff7f2a;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 26px;
-      cursor: pointer;
-    }
-
-    /* ---------- Hero ---------- */
-    #inicio {
-      position: relative;
-      height: 70vh;
-      min-height: 420px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    #inicio::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: url("https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FONDO%20DE%20PAGINA.png") center/cover no-repeat;
-      opacity: 0.45;
-      z-index: 0;
-    }
-
-    #inicio::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.6),
-        rgba(0,0,0,0.2),
-        rgba(0,0,0,0.6)
-      );
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 0 20px;
-      max-width: 900px;
-    }
-
-    .hero-content h1 {
-      font-size: clamp(28px, 4vw, 48px);
-      margin-bottom: 12px;
-      letter-spacing: 2px;
-    }
-
-    .hero-content p {
-      color: #e0e0e0;
-      font-size: clamp(14px, 1.2vw, 18px);
-    }
-
-    /* ---------- Glass Sections ---------- */
-    main {
-      padding: 40px 18px;
-      position: relative;
-      z-index: 5;
-    }
-
-    .glass {
-      background: rgba(255,255,255,0.07);
-      border-radius: 14px;
-      padding: 26px;
-      margin: 28px auto;
-      max-width: 1000px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
-    }
-
-    .glass h2 {
-      margin-bottom: 10px;
-    }
-
-    .glass p {
-      color: #d5d5d5;
-    }
-
-    /* ---------- Tienda ---------- */
-    .catalog {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 16px;
-    }
-
-    .product {
-      background: rgba(0,0,0,0.6);
-      border-radius: 12px;
-      padding: 14px;
-      text-align: center;
-      transition: transform 0.3s;
-    }
-
-    .product:hover {
-      transform: translateY(-6px);
-    }
-
-    .product img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 8px;
-    }
-
-    /* ---------- Redes ---------- */
-    .socials {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 12px;
-    }
-
-    .social-card {
-      background: rgba(255,255,255,0.1);
-      padding: 12px 22px;
-      border-radius: 12px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      transition: background 0.2s;
-    }
-
-    .social-card:hover {
-      background: rgba(255,127,42,0.35);
-    }
-
-    /* ---------- Contacto ---------- */
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    input, textarea {
-      padding: 10px;
-      border-radius: 8px;
-      border: none;
-      background: rgba(255,255,255,0.08);
-      color: #fff;
-    }
-
-    button {
-      background: #ff7f2a;
-      border: none;
-      padding: 10px;
-      border-radius: 8px;
-      color: #fff;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    button:hover {
-      background: #e56f1f;
-    }
-
-    /* ---------- Footer ---------- */
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #cfcfcf;
-      font-size: 0.9rem;
-    }
-
-    /* ---------- Responsive ---------- */
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      nav ul {
-        display: none;
-        position: absolute;
-        right: 16px;
-        top: 60px;
-        flex-direction: column;
-        background: rgba(0,0,0,0.95);
-        padding: 14px;
-        border-radius: 10px;
-        gap: 10px;
-      }
-
-      nav ul.show {
-        display: flex;
-      }
-
-      #inicio {
-        height: 55vh;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INCAS E-SPORT</title>
+  <link rel="icon" href="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/INC%20E-SPORT.png">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Spline flotante -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.27/build/spline-viewer.js"></script>
 </head>
 <body>
 
-  <!-- Cursor Light -->
+  <!-- Luz cursor -->
   <div id="cursor-light"></div>
 
-  <!-- Header -->
+  <!-- HEADER -->
   <header>
     <div class="logo">
-      <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LOGO.png" alt="Incas Esport">
+      <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/NW%20LOGO.png" alt="INCAS E-SPORT">
     </div>
 
     <nav>
-      <ul id="main-nav">
+      <ul id="navMenu">
         <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#family">FAMILY INC</a></li>
         <li><a href="#tienda">Tienda</a></li>
-        <li><a href="#siguenos">Síguenos</a></li>
+        <li><a href="#redes">Redes</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
 
-    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <div class="menu-toggle" id="menuToggle">☰</div>
   </header>
 
-  <!-- Hero -->
-  <section id="inicio">
-    <div class="hero-content">
-      <h1>Sobre Nosotros</h1>
-      <p>Somos Incas Esport, un equipo enfocado en la excelencia competitiva y el crecimiento de la comunidad.</p>
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content glass">
+      <h1>INCAS E-SPORT</h1>
+      <p>Equipo competitivo inspirado en la cultura peruana</p>
     </div>
   </section>
 
-  <!-- Main -->
-  <main>
-    <!-- Tienda -->
-    <section id="tienda" class="glass">
-      <h2>Tienda</h2>
-      <div class="catalog">
-        <div class="product">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/FAMILY.png" alt="">
-          <p>Family Collection</p>
-        </div>
-        <div class="product">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/MERCHANDISING.png" alt="">
-          <p>Merchandising</p>
-        </div>
-        <div class="product">
-          <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/JERSER%20%20OFICIAL.png" alt="">
-          <p>Jersey Oficial</p>
-        </div>
+  <!-- FAMILY INC -->
+  <section id="family" class="section glass">
+    <h2>FAMILY INC</h2>
+    <p>
+      Family INC representa a nuestra comunidad, unión y crecimiento.
+      Más que un equipo, somos una familia que apoya el talento y la pasión
+      por los esports.
+    </p>
+  </section>
+
+  <!-- TIENDA -->
+  <section id="tienda" class="section glass">
+    <h2>INCAS STORE</h2>
+    <div class="catalog">
+      <div class="product">
+        <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/Mesa%20de%20trabajo%205.png">
+        <h3>Producto INC</h3>
+        <p>S/ 40.00</p>
+        <a class="buy-btn" href="https://wa.me/51922659648" target="_blank">Comprar</a>
       </div>
-    </section>
-
-    <!-- Síguenos -->
-    <section id="siguenos" class="glass">
-      <h2>Síguenos</h2>
-      <div class="socials">
-        <a class="social-card" href="https://www.instagram.com/incas_esport.oficial/" target="_blank">Instagram</a>
-        <a class="social-card" href="https://www.tiktok.com/@incas_esport" target="_blank">TikTok</a>
-        <a class="social-card" href="https://x.com/Incas_esport" target="_blank">X</a>
+      <div class="product">
+        <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/Mesa%20de%20trabajo%201.png">
+        <h3>Producto INC</h3>
+        <p>S/ 40.00</p>
+        <a class="buy-btn" href="https://wa.me/51922659648" target="_blank">Comprar</a>
       </div>
-    </section>
+      <div class="product">
+        <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/Mesa%20de%20trabajo%206.png">
+        <h3>Producto INC</h3>
+        <p>S/ 40.00</p>
+        <a class="buy-btn" href="https://wa.me/51922659648" target="_blank">Comprar</a>
+      </div>
+      <div class="product">
+        <img src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/Mesa%20de%20trabajo%203.png">
+        <h3>Producto INC</h3>
+        <p>S/ 40.00</p>
+        <a class="buy-btn" href="https://wa.me/51922659648" target="_blank">Comprar</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contacto -->
-    <section id="contacto" class="glass">
-      <h2>Contacto</h2>
-      <form>
-        <input type="text" placeholder="Tu nombre" required>
-        <input type="email" placeholder="Tu correo" required>
-        <textarea rows="4" placeholder="Tu mensaje" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-  </main>
+  <!-- REDES -->
+  <section id="redes" class="section glass">
+    <h2>Redes Sociales</h2>
+    <div class="socials">
+      <a class="social-btn instagram" href="https://www.instagram.com/incas_esport.oficial/" target="_blank">Instagram</a>
+      <a class="social-btn tiktok" href="#" target="_blank">TikTok</a>
+      <a class="social-btn x" href="#" target="_blank">X</a>
+    </div>
+  </section>
 
+  <!-- CONTACTO -->
+  <section id="contacto" class="section glass">
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Correo" required>
+      <textarea rows="4" placeholder="Mensaje"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <!-- Spline flotante en Contacto -->
+    <div class="spline-contact">
+      <spline-viewer url="https://prod.spline.design/ZqDED-EPmF-5sufo/scene.splinecode"></spline-viewer>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    © 2025 Incas Esport. Todos los derechos reservados.
+    © 2025 INCAS E-SPORT – Todos los derechos reservados
   </footer>
 
-  <script>
-    // Cursor light
-    const cursorLight = document.getElementById("cursor-light");
-    document.addEventListener("mousemove", (e) => {
-      cursorLight.style.background =
-        `radial-gradient(circle at ${e.clientX}px ${e.clientY}px,
-        rgba(255,127,42,0.2), transparent 50%)`;
-    });
-
-    // Menú responsive
-    const toggle = document.getElementById("menu-toggle");
-    const nav = document.getElementById("main-nav");
-
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("show");
-    });
-
-    nav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("show");
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
