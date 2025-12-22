@@ -1,15 +1,14 @@
-// Luz que sigue el cursor
+// Cursor light
 const cursorLight = document.getElementById("cursor-light");
 document.addEventListener("mousemove", (e) => {
-  cursorLight.style.background = `
-    radial-gradient(circle at ${e.clientX}px ${e.clientY}px,
-    rgba(255,127,42,0.2), transparent 50%)
-  `;
+  cursorLight.style.background =
+    `radial-gradient(circle at ${e.clientX}px ${e.clientY}px,
+    rgba(255,127,42,0.2), transparent 45%)`;
 });
 
 // Menú responsive
-const toggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector("nav ul");
+const toggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
 toggle.addEventListener("click", () => {
-  nav.classList.toggle("show");
+  navMenu.classList.toggle("show");
 });
