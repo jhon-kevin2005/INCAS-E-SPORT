@@ -1,71 +1,50 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>INDARK | E-SPORT</title>
+  <title>INDARK | Esports</title>
 
-  <!-- Favicon -->
-  <link
-    rel="icon"
-    type="image/png"
-    href="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/INC%20E-SPORT.png"
-  />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Orbitron:wght@500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  >
+  <link rel="icon" type="image/png"
+    href="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/INC%20E-SPORT.png">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- EFECTOS DE FONDO -->
-  <div class="cursor-light" id="cursor-light"></div>
-  <div class="noise"></div>
+  <div id="cursor-light"></div>
 
   <!-- HEADER -->
   <header id="header">
 
-    <a href="#inicio" class="logo">
+    <div class="logo">
       <img
         src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/INC%20E-SPORT.png"
-        alt="INDARK E-SPORT"
+        alt="INDARK"
       >
-      <span>INDARK</span>
-    </a>
+    </div>
 
     <nav>
       <ul id="navMenu">
         <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#family">Family</a></li>
-        <li><a href="#divisiones">Divisiones</a></li>
+        <li><a href="#family">Comunidad</a></li>
+        <li><a href="#division">Divisiones</a></li>
         <li><a href="#momentos">Momentos</a></li>
-        <li><a href="#tienda">Store</a></li>
+        <li><a href="#tienda">Tienda</a></li>
         <li><a href="#redes">Redes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
-
-    <a href="#contacto" class="header-cta">
-      CONTACTO
-    </a>
 
     <button
       class="menu-toggle"
       id="menuToggle"
+      type="button"
       aria-label="Abrir menú"
     >
-      <span></span>
-      <span></span>
-      <span></span>
+      ☰
     </button>
 
   </header>
@@ -79,103 +58,111 @@
 
     <div class="hero-content">
 
-      <div class="hero-tag">
-        <span></span>
-        ORGANIZACIÓN E-SPORT
+      <div class="hero-badge">
+        PERÚ • ESPORTS • COMPETITIVE
       </div>
 
-      <h1>
-        WE ARE
-        <strong>INDARK</strong>
-      </h1>
+      <h1>INDARK</h1>
 
       <p>
-        Una organización, una familia y una pasión.
-        Competimos, creamos y crecemos juntos.
+        Competimos con pasión. Crecemos como familia.
+        Jugamos para dejar nuestra marca.
       </p>
 
       <div class="hero-buttons">
 
-        <a href="#divisiones" class="btn btn-primary">
+        <a href="#division" class="primary-btn">
           VER DIVISIONES
-          <span>→</span>
         </a>
 
-        <a href="#family" class="btn btn-secondary">
-          CONOCER INDARK
+        <a href="#family" class="secondary-btn">
+          CONÓCENOS
         </a>
 
       </div>
 
-    </div>
-
-    <div class="scroll-indicator">
-      <span>SCROLL</span>
-      <div></div>
     </div>
 
   </section>
 
 
-  <!-- FAMILY -->
-  <section id="family" class="section">
+  <!-- FAMILY / COMUNIDAD -->
+  <section id="family" class="section family-section">
 
-    <div class="section-container family-container">
+    <div class="section-intro reveal">
 
-      <div class="section-heading reveal">
+      <span class="section-label">
+        NUESTRA COMUNIDAD
+      </span>
 
-        <span class="section-number">01</span>
+      <h2>FAMILY INDARK</h2>
 
-        <div>
-          <span class="eyebrow">
-            NUESTRA COMUNIDAD
-          </span>
+      <p>
+        INDARK es más que un equipo competitivo.
+        Somos una comunidad donde cada jugador aporta,
+        aprende, compite y crece junto a los demás.
+      </p>
 
-          <h2>
-            FAMILY <strong>INDARK</strong>
-          </h2>
-        </div>
+      <a
+        href="https://whatsapp.com/channel/0029ValeU2a5a24AYjgvHC19"
+        target="_blank"
+        rel="noopener"
+        class="community-btn"
+      >
+        ⚡ ÚNETE A NUESTRA COMUNIDAD
+      </a>
 
-      </div>
-
-
-      <div class="family-grid">
-
-        <div class="family-text reveal">
-
-          <p class="large-text">
-            No somos solamente jugadores.
-            Somos una comunidad que comparte la misma pasión por competir.
-          </p>
-
-          <p>
-            INDARK reúne jugadores, creadores y personas que buscan crecer,
-            representar a su comunidad y construir algo más grande juntos.
-          </p>
-
-        </div>
+    </div>
 
 
-        <div class="stats-grid reveal">
+    <div class="family-cards">
 
-          <div class="stat-card">
-            <strong>01+</strong>
-            <span>DIVISIONES</span>
-          </div>
+      <article class="family-card reveal">
 
-          <div class="stat-card">
-            <strong>100+</strong>
-            <span>MIEMBROS</span>
-          </div>
+        <div class="family-number">01</div>
 
-          <div class="stat-card">
-            <strong>01</strong>
-            <span>FAMILIA</span>
-          </div>
+        <div class="family-icon">👥</div>
 
-        </div>
+        <h3>COMUNIDAD</h3>
 
-      </div>
+        <p>
+          Una familia unida por los videojuegos,
+          la pasión y las ganas de seguir creciendo.
+        </p>
+
+      </article>
+
+
+      <article class="family-card reveal">
+
+        <div class="family-number">02</div>
+
+        <div class="family-icon">🏆</div>
+
+        <h3>COMPETENCIA</h3>
+
+        <p>
+          Entrenamos para superar nuestros límites
+          y representar con orgullo nuestros colores.
+        </p>
+
+      </article>
+
+
+      <article class="family-card reveal">
+
+        <div class="family-number">03</div>
+
+        <div class="family-icon">🚀</div>
+
+        <h3>CRECIMIENTO</h3>
+
+        <p>
+          Cada temporada representa una nueva oportunidad
+          para evolucionar juntos como INDARK.
+        </p>
+
+      </article>
 
     </div>
 
@@ -183,96 +170,82 @@
 
 
   <!-- DIVISIONES -->
-  <section id="divisiones" class="section divisions-section">
+  <section id="division" class="section divisions-section">
 
-    <div class="section-container">
+    <div class="section-intro reveal">
 
-      <div class="section-heading reveal">
+      <span class="section-label">
+        NUESTROS EQUIPOS
+      </span>
 
-        <span class="section-number">02</span>
+      <h2>DIVISIONES INDARK</h2>
 
-        <div>
-
-          <span class="eyebrow">
-            COMPETITIVE GAMING
-          </span>
-
-          <h2>
-            NUESTRAS <strong>DIVISIONES</strong>
-          </h2>
-
-        </div>
-
-      </div>
-
-
-      <p class="section-description reveal">
-        Selecciona una división para conocer a los jugadores
-        que representan a INDARK.
+      <p>
+        Selecciona una división y conoce
+        a los jugadores que representan a INDARK.
       </p>
 
-
-      <!-- BOTONES DE JUEGOS -->
-      <div class="game-tabs reveal">
-
-        <button
-          class="game-tab active"
-          data-game="freefire"
-        >
-          <span class="game-icon">🔥</span>
-          FREE FIRE
-        </button>
-
-        <button
-          class="game-tab"
-          data-game="cod"
-        >
-          <span class="game-icon">⚔</span>
-          CALL OF DUTY
-        </button>
-
-        <button
-          class="game-tab"
-          data-game="mlbb"
-        >
-          <span class="game-icon">⚡</span>
-          MOBILE LEGENDS
-        </button>
-
-      </div>
+    </div>
 
 
-      <!-- INFORMACIÓN DE LA DIVISIÓN -->
-      <div class="division-info reveal">
+    <div class="game-tabs reveal">
 
-        <div class="division-title">
+      <button
+        class="game-tab active"
+        data-game="freefire"
+        type="button"
+      >
+        🔥 FREE FIRE
+      </button>
 
-          <span class="division-label">
-            DIVISIÓN ACTIVA
-          </span>
+      <button
+        class="game-tab"
+        data-game="freefire_female"
+        type="button"
+      >
+        👑 FREE FIRE FEMENINO
+      </button>
 
-          <h3 id="divisionName">
-            FREE FIRE
-          </h3>
+      <button
+        class="game-tab"
+        data-game="cod"
+        type="button"
+      >
+        ⚔ CALL OF DUTY
+      </button>
 
-          <p id="divisionDescription">
-            El roster oficial de INDARK para Free Fire.
-          </p>
-
-        </div>
-
-        <div class="division-line"></div>
-
-      </div>
-
-
-      <!-- ROSTER -->
-      <div
-        class="players-grid"
-        id="playersGrid"
-      ></div>
+      <button
+        class="game-tab"
+        data-game="mlbb"
+        type="button"
+      >
+        ⚡ MOBILE LEGENDS
+      </button>
 
     </div>
+
+
+    <div class="division-info reveal">
+
+      <span class="section-label">
+        ROSTER ACTIVO
+      </span>
+
+      <h3 id="divisionName">
+        FREE FIRE
+      </h3>
+
+      <p id="divisionDescription">
+        El roster oficial de INDARK.
+      </p>
+
+    </div>
+
+
+    <div
+      class="players-grid"
+      id="playersGrid"
+    ></div>
 
   </section>
 
@@ -280,57 +253,45 @@
   <!-- MOMENTOS -->
   <section id="momentos" class="section">
 
-    <div class="section-container">
+    <div class="section-intro reveal">
 
-      <div class="section-heading reveal">
+      <span class="section-label">
+        NUESTRA HISTORIA
+      </span>
 
-        <span class="section-number">03</span>
+      <h2>MOMENTOS INDARK</h2>
 
-        <div>
+    </div>
 
-          <span class="eyebrow">
-            NUESTRA HISTORIA
-          </span>
 
-          <h2>
-            MOMENTOS <strong>INDARK</strong>
-          </h2>
+    <div class="momentos-grid">
 
-        </div>
-
+      <div class="momento-card reveal">
+        <img
+          src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/GAME%20DAY%20POST%20INC.png"
+          alt="Game Day INDARK"
+        >
       </div>
 
+      <div class="momento-card reveal">
+        <img
+          src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/BANNER.2026.png"
+          alt="INDARK"
+        >
+      </div>
 
-      <div class="momentos-grid">
+      <div class="momento-card reveal">
+        <img
+          src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/somos%20finalistas.png"
+          alt="Finalistas"
+        >
+      </div>
 
-        <article class="momento-card reveal">
-          <img
-            src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/GAME%20DAY%20POST%20INC.png"
-            alt="INDARK Game Day"
-          >
-        </article>
-
-        <article class="momento-card reveal">
-          <img
-            src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/BANNER.2026.png"
-            alt="INDARK Banner"
-          >
-        </article>
-
-        <article class="momento-card reveal">
-          <img
-            src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/somos%20finalistas.png"
-            alt="INDARK Finalistas"
-          >
-        </article>
-
-        <article class="momento-card reveal">
-          <img
-            src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/GRACIAS.png"
-            alt="INDARK"
-          >
-        </article>
-
+      <div class="momento-card reveal">
+        <img
+          src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/GRACIAS.png"
+          alt="Gracias"
+        >
       </div>
 
     </div>
@@ -338,172 +299,108 @@
   </section>
 
 
-  <!-- STORE -->
-  <section id="tienda" class="section store-section">
+  <!-- TIENDA -->
+  <section id="tienda" class="section">
 
-    <div class="section-container">
+    <div class="section-intro reveal">
 
-      <div class="section-heading reveal">
+      <span class="section-label">
+        MERCH OFICIAL
+      </span>
 
-        <span class="section-number">04</span>
+      <h2>INDARK STORE</h2>
 
-        <div>
-
-          <span class="eyebrow">
-            OFFICIAL MERCH
-          </span>
-
-          <h2>
-            INDARK <strong>STORE</strong>
-          </h2>
-
-        </div>
-
-      </div>
+    </div>
 
 
-      <div class="catalog">
+    <div class="catalog">
 
-        <article class="product reveal">
+      <article class="product reveal">
 
-          <div class="product-image">
-            <img
-              src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/Mesa%20de%20trabajo%205.png"
-              alt="Producto INDARK"
-            >
-          </div>
+        <img
+          src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/Mesa%20de%20trabajo%205.png"
+          alt="Producto INDARK"
+        >
 
-          <div class="product-info">
+        <h3>PRODUCTO INDARK</h3>
+        <p>S/ 40.00</p>
 
-            <span>OFFICIAL MERCH</span>
+        <a
+          class="buy-btn"
+          href="https://wa.me/51922659648"
+          target="_blank"
+          rel="noopener"
+        >
+          COMPRAR
+        </a>
 
-            <h3>JERSEY INDARK</h3>
-
-            <div class="product-bottom">
-
-              <strong>S/ 40.00</strong>
-
-              <a
-                class="buy-btn"
-                href="https://wa.me/51922659648"
-                target="_blank"
-                rel="noopener"
-              >
-                COMPRAR →
-              </a>
-
-            </div>
-
-          </div>
-
-        </article>
+      </article>
 
 
-        <article class="product reveal">
+      <article class="product reveal">
 
-          <div class="product-image">
-            <img
-              src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/Mesa%20de%20trabajo%201.png"
-              alt="Producto INDARK"
-            >
-          </div>
+        <img
+          src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/Mesa%20de%20trabajo%201.png"
+          alt="Producto INDARK"
+        >
 
-          <div class="product-info">
+        <h3>PRODUCTO INDARK</h3>
+        <p>S/ 40.00</p>
 
-            <span>OFFICIAL MERCH</span>
+        <a
+          class="buy-btn"
+          href="https://wa.me/51922659648"
+          target="_blank"
+          rel="noopener"
+        >
+          COMPRAR
+        </a>
 
-            <h3>INDARK EDITION</h3>
-
-            <div class="product-bottom">
-
-              <strong>S/ 40.00</strong>
-
-              <a
-                class="buy-btn"
-                href="https://wa.me/51922659648"
-                target="_blank"
-                rel="noopener"
-              >
-                COMPRAR →
-              </a>
-
-            </div>
-
-          </div>
-
-        </article>
+      </article>
 
 
-        <article class="product reveal">
+      <article class="product reveal">
 
-          <div class="product-image">
-            <img
-              src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/Mesa%20de%20trabajo%206.png"
-              alt="Producto INDARK"
-            >
-          </div>
+        <img
+          src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/Mesa%20de%20trabajo%206.png"
+          alt="Producto INDARK"
+        >
 
-          <div class="product-info">
+        <h3>PRODUCTO INDARK</h3>
+        <p>S/ 40.00</p>
 
-            <span>OFFICIAL MERCH</span>
+        <a
+          class="buy-btn"
+          href="https://wa.me/51922659648"
+          target="_blank"
+          rel="noopener"
+        >
+          COMPRAR
+        </a>
 
-            <h3>TEAM INDARK</h3>
-
-            <div class="product-bottom">
-
-              <strong>S/ 40.00</strong>
-
-              <a
-                class="buy-btn"
-                href="https://wa.me/51922659648"
-                target="_blank"
-                rel="noopener"
-              >
-                COMPRAR →
-              </a>
-
-            </div>
-
-          </div>
-
-        </article>
+      </article>
 
 
-        <article class="product reveal">
+      <article class="product reveal">
 
-          <div class="product-image">
-            <img
-              src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/Mesa%20de%20trabajo%203.png"
-              alt="Producto INDARK"
-            >
-          </div>
+        <img
+          src="https://uploads.onecompiler.io/42wjfjacc/43abvxugp/Mesa%20de%20trabajo%203.png"
+          alt="Producto INDARK"
+        >
 
-          <div class="product-info">
+        <h3>PRODUCTO INDARK</h3>
+        <p>S/ 40.00</p>
 
-            <span>OFFICIAL MERCH</span>
+        <a
+          class="buy-btn"
+          href="https://wa.me/51922659648"
+          target="_blank"
+          rel="noopener"
+        >
+          COMPRAR
+        </a>
 
-            <h3>INDARK CLASSIC</h3>
-
-            <div class="product-bottom">
-
-              <strong>S/ 40.00</strong>
-
-              <a
-                class="buy-btn"
-                href="https://wa.me/51922659648"
-                target="_blank"
-                rel="noopener"
-              >
-                COMPRAR →
-              </a>
-
-            </div>
-
-          </div>
-
-        </article>
-
-      </div>
+      </article>
 
     </div>
 
@@ -513,65 +410,45 @@
   <!-- REDES -->
   <section id="redes" class="section">
 
-    <div class="section-container">
+    <div class="section-intro reveal">
 
-      <div class="section-heading reveal">
+      <span class="section-label">
+        SÍGUENOS
+      </span>
 
-        <span class="section-number">05</span>
+      <h2>REDES SOCIALES</h2>
 
-        <div>
-
-          <span class="eyebrow">
-            FOLLOW THE DARK
-          </span>
-
-          <h2>
-            NUESTRAS <strong>REDES</strong>
-          </h2>
-
-        </div>
-
-      </div>
+    </div>
 
 
-      <div class="socials reveal">
+    <div class="socials reveal">
 
-        <a
-          class="social-card"
-          href="https://www.instagram.com/incas_esport.oficial/"
-          target="_blank"
-          rel="noopener"
-        >
-          <span>01</span>
-          <strong>INSTAGRAM</strong>
-          <small>Síguenos →</small>
-        </a>
+      <a
+        class="social-btn"
+        href="https://www.instagram.com/incas_esport.oficial/"
+        target="_blank"
+        rel="noopener"
+      >
+        INSTAGRAM
+      </a>
 
+      <a
+        class="social-btn"
+        href="https://www.tiktok.com/@incas_esport?lang=es-419"
+        target="_blank"
+        rel="noopener"
+      >
+        TIKTOK
+      </a>
 
-        <a
-          class="social-card"
-          href="https://www.tiktok.com/@incas_esport?lang=es-419"
-          target="_blank"
-          rel="noopener"
-        >
-          <span>02</span>
-          <strong>TIKTOK</strong>
-          <small>Ver contenido →</small>
-        </a>
-
-
-        <a
-          class="social-card"
-          href="https://x.com/Incas_esport"
-          target="_blank"
-          rel="noopener"
-        >
-          <span>03</span>
-          <strong>X / TWITTER</strong>
-          <small>Seguir →</small>
-        </a>
-
-      </div>
+      <a
+        class="social-btn"
+        href="https://x.com/Incas_esport"
+        target="_blank"
+        rel="noopener"
+      >
+        X / TWITTER
+      </a>
 
     </div>
 
@@ -579,20 +456,17 @@
 
 
   <!-- CONTACTO -->
-  <section id="contacto" class="section contact-section">
+  <section id="contacto" class="section">
 
     <div class="contact-box reveal">
 
-      <span class="eyebrow">
-        LET'S TALK
+      <span class="section-label">
+        HABLEMOS
       </span>
 
-      <h2>
-        ¿QUIERES SER PARTE DE
-        <strong>INDARK?</strong>
-      </h2>
+      <h2>CONTACTO</h2>
 
-      <form>
+      <form id="contactForm">
 
         <input
           type="text"
@@ -608,12 +482,12 @@
 
         <textarea
           rows="5"
-          placeholder="Cuéntanos en qué podemos ayudarte..."
+          placeholder="Escribe tu mensaje"
           required
         ></textarea>
 
         <button type="submit">
-          ENVIAR MENSAJE →
+          ENVIAR MENSAJE
         </button>
 
       </form>
@@ -631,8 +505,7 @@
     </div>
 
     <p>
-      © 2026 INDARK E-SPORT.
-      Todos los derechos reservados.
+      © 2026 INDARK. Todos los derechos reservados.
     </p>
 
   </footer>
@@ -642,4 +515,3 @@
 
 </body>
 </html>
-```
