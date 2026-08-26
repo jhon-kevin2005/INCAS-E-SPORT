@@ -132,7 +132,7 @@ const divisions = {
       {
         nickname: "INC.Suarez",
         name: "Jugadora INDARK",
-        role: "JUGADORA",
+        role: "SUPORT",
 
         image:
           "https://uploads.onecompiler.io/42wjfjacc/43abvxugp/ChatGPT%20Image%2026%20ago%202026,%2012_18_03.png"
@@ -141,7 +141,7 @@ const divisions = {
       {
         nickname: "INC. XIME",
         name: "Jugadora INDARK",
-        role: "JUGADORA",
+        role: "RUSHER",
 
         image:
           "https://uploads.onecompiler.io/42wjfjacc/43abvxugp/ChatGPT%20Image%2026%20ago%202026,%2012_28_35.png"
@@ -150,7 +150,7 @@ const divisions = {
       {
         nickname: "INC. NICOL J",
         name: "Jugadora INDARK",
-        role: "JUGADORA",
+        role: "RUSHER",
 
         image:
           "https://uploads.onecompiler.io/42wjfjacc/43abvxugp/ChatGPT%20Image%2026%20ago%202026,%2012_33_33.png"
@@ -159,7 +159,7 @@ const divisions = {
       {
         nickname: "INC. NANDA7",
         name: "Jugadora INDARK",
-        role: "JUGADORA",
+        role: "RUSHER",
 
         image:
           "https://uploads.onecompiler.io/42wjfjacc/43abvxugp/ChatGPT%20Image%2026%20ago%202026,%2012_21_34.png"
